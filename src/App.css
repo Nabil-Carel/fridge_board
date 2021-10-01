@@ -1,38 +1,102 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: black !important;
+  color: white;
+  width: 800px;
+  height: 480px;
+  border: 1px solid black;
+}
+.DatePicker {
+  width: 30%;
+  color: white;
+  background-color: black;
+}
+.MuiPickersToolbar-toolbar {
+  background-color: black !important;
+  color: white !important;
+}
+
+.MuiPickersToolbarText-toolbarTxt {
+  color: white !important;
+}
+.MuiPickersBasePicker-pickerView {
+  color: white !important;
+  background-color: black !important;
+}
+
+.MuiPickersDay-dayDisabled {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.MuiPickersCalendarHeader-dayLabel {
+  color: white !important;
+  background-color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.MuiButtonBase-root,
+.MuiIconButton-root,
+.MuiPickersDay-day,
+.MuiPickersDay-dayDisabled {
+  color: white !important;
+}
+
+.MuiPickersDay-daySelected {
+  color: black !important;
+  font-weight: bold !important;
+  background-color: white !important;
+}
+
+.MuiPickersStaticWrapper-staticWrapperRoot {
+  border: solid white 1px !important;
+  font-weight: bold !important;
+}
+.ant-table {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.85);
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  font-feature-settings: "tnum", "tnum";
+  position: relative;
+  font-size: 14px;
+  background: #fff;
+  border-radius: 2px;
+}
+th,
+td {
+  background: black !important;
+  border: 1px solid #f0f0f0 !important;
+  color: white !important;
+  /*overflow-wrap: break-word !important;*/
+  hyphens: auto;
+}
+table {
+  margin-left: 1px;
+}
+
+col {
+  width: 25% !important;
+}
+table.fixed {
+  table-layout: fixed;
+}
+
+.rightColumn {
+  width: 50% !important;
+  border-left: 1px solid white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white !important;
+  font-weight: bold !important;
+}
+.weather {
+  background: black !important;
+  color: white !important;
 }
