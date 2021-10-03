@@ -16,6 +16,7 @@ function App() {
     lang: "fr",
     unit: "metric", // values are (metric, standard, imperial)
   });
+  const date = new Date();
 
   const customStyles = {
     fontFamily: "Helvetica, sans-serif",
@@ -101,6 +102,7 @@ function App() {
           tableLayout="fixed"
           size="small"
         />
+        <p>{`Last update: ${date.toLocaleTimeString()}`} </p>
       </div>
     </div>
   );
