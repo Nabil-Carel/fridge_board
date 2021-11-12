@@ -119,7 +119,7 @@ function App() {
           tableLayout="fixed"
           size="small"
         />
-        <p>{`${calcTime(-4)}`}</p>
+        <p>{`${new Date().toLocaleString()}`}</p>
       </div>
     </div>
   );
