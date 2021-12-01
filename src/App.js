@@ -59,23 +59,23 @@ function App() {
     async function fetchTableData() {
       const promises = [getTasks(), getRoommates()];
       await Promise.all(promises).then(([tasks, roommates]) => {
-        setTaskList([
-          tasks[0].tasks.reduce((previous, current, index) => {
+        setTaskList(
+          tasks[0].tasks /*.reduce((previous, current, index) => {
             return {
               ...previous,
               [`task${index}`]: current,
             };
-          }, {}),
-        ]);
+          }, {}),*/
+        );
 
         setRoommateList(
-          roommates[0].roommates.map((elem, index) => {
+          roommates[0].roommates /*.map((elem, index) => {
             return {
               title: elem,
               dataIndex: `task${index}`,
               key: `task${index}`,
             };
-          })
+          })*/
         );
       });
 
@@ -83,6 +83,12 @@ function App() {
     }
     fetchTableData();
   }, []);
+  const tableRows = roommateList.map((elem, index) => (
+    <tr>
+      <td>{elem}</td>
+      <td>{taskList[index]}</td>
+    </tr>
+  ));
   return (
     <div className="App">
       {/* <DatePicker
@@ -97,7 +103,7 @@ function App() {
         rightArrowIcon={null}
         leftArrowIcon={null}
       /> */}
-      <div>
+      <div className="weatherDiv">
         <ReactWeather
           isLoading={isLoading}
           errorMessage={errorMessage}
@@ -111,14 +117,9 @@ function App() {
         />
       </div>
       <div className="rightColumn">
-        <Table
-          columns={roommateList}
-          dataSource={taskList}
-          pagination={false}
-          className="table"
-          tableLayout="fixed"
-          size="small"
-        />
+        <table className="table">
+          {tableRows.length > 0 ? tableRows : <tr>ehi</tr>}
+        </table>
         <p>{`${new Date().toLocaleString()}`}</p>
       </div>
     </div>

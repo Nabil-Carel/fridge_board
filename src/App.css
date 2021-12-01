@@ -73,6 +73,11 @@ td {
 }
 table {
   margin-left: 1px;
+  width: 100%;
+  height: 80%;
+  text-align: center;
+  font-weight: bold;
+  font-size: x-large;
 }
 
 col {
@@ -99,4 +104,7 @@ h6 {
 .weather {
   background: black !important;
   color: white !important;
+}
+.weatherDiv {
+  overflow: hidden !important;
 }
